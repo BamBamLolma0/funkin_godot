@@ -52,9 +52,9 @@ func _process(delta: float) -> void:
 		camera_zoom = zoom
 	
 	if position_lerps:
-		position = position.lerp(position_target, delta * 3.0 * position_lerp_speed)
+		position = position.lerp(position_target, GameUtils.lerp_weight(delta, 3.0 * position_lerp_speed))
 	if zoom_lerps:
-		zoom = zoom.lerp(zoom_target, delta * 3.0 * zoom_lerp_speed)
+		zoom = zoom.lerp(zoom_target, GameUtils.lerp_weight(delta, 3.0 * zoom_lerp_speed))
 
 
 func _on_beat_hit(beat: int) -> void:

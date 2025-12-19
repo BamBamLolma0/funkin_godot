@@ -206,6 +206,10 @@ func hit_note(note: Note) -> void:
 
 
 func miss_note(note: Note) -> void:
+	if not takes_input:
+		hit_note(note)
+		return
+	
 	var target: Character = target_character
 	if is_instance_valid(note.character):
 		target = note.character
