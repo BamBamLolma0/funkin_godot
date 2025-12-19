@@ -184,7 +184,10 @@ func _on_note_hit(note: Note) -> void:
 
 
 func _on_note_miss(note: Note) -> void:
-	rating_container.visible = false
+	if is_instance_valid(rating_tween) and rating_tween.is_running():
+		rating_tween.kill()
+	
+	rating_container.modulate.a = 0.0
 	note_miss.emit(note)
 
 
