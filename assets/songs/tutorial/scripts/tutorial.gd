@@ -2,8 +2,6 @@ extends FunkinScript
 
 
 func _ready() -> void:
-	super()
-	
 	if is_instance_valid(camera):
 		camera.zoom_lerps = false
 		camera.bumps = false

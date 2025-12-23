@@ -20,7 +20,6 @@ func _exit_tree() -> void:
 
 
 func _ready() -> void:
-	super()
 	game.spectator.offset_camera_position(Vector2(0.0, 75.0))
 
 

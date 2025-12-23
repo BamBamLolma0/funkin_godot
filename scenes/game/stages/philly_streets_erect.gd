@@ -30,8 +30,6 @@ var timer: float = 0.0
 
 
 func _ready() -> void:
-	super()
-	
 	if not Config.get_value("performance", "intensive_visuals"):
 		for mist: Node2D in mists:
 			mist.free()

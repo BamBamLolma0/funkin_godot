@@ -17,7 +17,6 @@ class_name BaseCutscene extends FunkinScript
 @export var auto_free: bool = true
 
 func _ready() -> void:
-	super()
 	if Game.mode == Game.PlayMode.FREEPLAY and not play_in_freeplay:
 		queue_free()
 		return
