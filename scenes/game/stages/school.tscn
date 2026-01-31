@@ -2,29 +2,121 @@
 
 [ext_resource type="Script" uid="uid://bn5n82vuwrrl8" path="res://scenes/game/stages/stage.gd" id="1_lmfq2"]
 [ext_resource type="Script" uid="uid://dvnwbtnvi747m" path="res://scenes/game/stages/character_preview.gd" id="2_5t4tn"]
+[ext_resource type="Texture2D" uid="uid://3qt7hboncop0" path="res://assets/game/stages/weeb/weebSky.png" id="2_fat5f"]
+[ext_resource type="Texture2D" uid="uid://dtfb8cw57n8a1" path="res://assets/game/stages/weeb/weebSchool.png" id="3_mqudt"]
+[ext_resource type="Texture2D" uid="uid://dvfr3e5dlscld" path="res://assets/game/stages/weeb/weebTreesBack.png" id="4_fce0u"]
+[ext_resource type="SpriteFrames" uid="uid://buoca1qhtxbe2" path="res://assets/game/stages/weeb/petals.res" id="5_wg6cs"]
+[ext_resource type="Script" uid="uid://xcwf8fppek0h" path="res://scripts/animated_sprite.gd" id="6_d6jfe"]
+[ext_resource type="SpriteFrames" uid="uid://b084isfcsninf" path="res://assets/game/stages/weeb/bgFreaks.res" id="8_g510g"]
+[ext_resource type="Texture2D" uid="uid://bgi40ih4gtn7d" path="res://assets/game/stages/weeb/weebStreet.png" id="9_fykhq"]
 
-[node name="template" type="Node2D" unique_id=1240196354]
+[node name="school" type="Node2D" unique_id=1240196354]
 script = ExtResource("1_lmfq2")
-default_zoom = 0.9
+default_zoom = 1.0
 
-[node name="background_color_rect" type="ColorRect" parent="." unique_id=1342166791]
-offset_left = -320.0
-offset_top = -180.0
-offset_right = 1600.0
-offset_bottom = 900.0
-color = Color(0.5078125, 0.5078125, 0.5078125, 1)
+[node name="sky" type="Parallax2D" parent="." unique_id=568457587]
+z_index = 10
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(-615.80176, 206.64493)
+
+[node name="weeb_sky" type="Sprite2D" parent="sky" unique_id=734315320]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("2_fat5f")
+centered = false
+
+[node name="school" type="Parallax2D" parent="." unique_id=707991851]
+z_index = 20
+scroll_scale = Vector2(0.75, 0.75)
+scroll_offset = Vector2(-812.81305, 175.0223)
+
+[node name="weeb_school" type="Sprite2D" parent="school" unique_id=122354566]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("3_mqudt")
+centered = false
+
+[node name="backTrees" type="Parallax2D" parent="." unique_id=321018241]
+z_index = 15
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(-835.6261, 165.57803)
+
+[node name="weeb_trees_back" type="Sprite2D" parent="backTrees" unique_id=917734372]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("4_fce0u")
+centered = false
+
+[node name="petals" type="Parallax2D" parent="." unique_id=1444776544]
+z_index = 70
+scroll_scale = Vector2(0.85, 0.85)
+scroll_offset = Vector2(-18.08783, 160)
+
+[node name="animated_sprite" type="AnimatedSprite2D" parent="petals" unique_id=742723680]
+texture_filter = 1
+scale = Vector2(6, 6)
+sprite_frames = ExtResource("5_wg6cs")
+animation = &"PETALS ALL"
+frame_progress = 0.428648
+script = ExtResource("6_d6jfe")
+playing = true
+metadata/_custom_type_script = "uid://xcwf8fppek0h"
 
 [node name="spectator" type="Marker2D" parent="." unique_id=519074427]
-position = Vector2(625, 750)
+z_index = 100
+position = Vector2(724, 1003.46655)
 script = ExtResource("2_5t4tn")
 character_path = "uid://c5y48burjtsqv"
 
+[node name="camera_offset" type="Marker2D" parent="spectator" unique_id=1822757103]
+position = Vector2(-4, -430.46655)
+
 [node name="player" type="Marker2D" parent="." unique_id=1757843855]
-position = Vector2(1000, 800)
+z_index = 300
+position = Vector2(1168, 1080.4666)
 script = ExtResource("2_5t4tn")
 character_path = "uid://bv6yjr8gjtef4"
 
+[node name="camera_offset" type="Marker2D" parent="player" unique_id=504427115]
+position = Vector2(-116, -268)
+
 [node name="opponent" type="Marker2D" parent="." unique_id=1560056936]
-position = Vector2(256, 800)
+z_index = 200
+position = Vector2(306, 1140.4666)
 script = ExtResource("2_5t4tn")
 character_path = "uid://d3g735kmawca2"
+
+[node name="camera_offset" type="Marker2D" parent="opponent" unique_id=1783944443]
+position = Vector2(132, -565.46655)
+
+[node name="animated_sprite" type="AnimatedSprite2D" parent="." unique_id=48313828]
+z_index = 80
+texture_filter = 1
+position = Vector2(-646, 402.46655)
+scale = Vector2(6, 6)
+sprite_frames = ExtResource("8_g510g")
+animation = &"BG girls group"
+frame = 29
+frame_progress = 1.0
+centered = false
+script = ExtResource("6_d6jfe")
+metadata/_custom_type_script = "uid://xcwf8fppek0h"
+
+[node name="weeb_street" type="Sprite2D" parent="." unique_id=479441197]
+z_index = 30
+texture_filter = 1
+position = Vector2(-662, 222)
+scale = Vector2(6, 6)
+texture = ExtResource("9_fykhq")
+centered = false
+
+[node name="treesFG" type="Parallax2D" parent="." unique_id=1678470069]
+z_index = 20
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(-493.6261, 251.57803)
+
+[node name="weeb_trees_back" type="Sprite2D" parent="treesFG" unique_id=1807551070]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("4_fce0u")
+centered = false

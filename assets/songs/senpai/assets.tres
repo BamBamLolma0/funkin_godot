@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SongAssets" format=3 uid="uid://bxggxrplo2bvm"]
+
+[ext_resource type="PackedScene" uid="uid://cr0c14kq4sye1" path="res://scenes/game/huds/default_hud.tscn" id="1_mp6ec"]
+[ext_resource type="Script" uid="uid://dk2lxfhv5lvf4" path="res://scripts/resources/song_assets.gd" id="1_poquf"]
+[ext_resource type="Resource" uid="uid://bx66ixfj76oix" path="res://assets/game/skins/pixel/hud_skin.tres" id="2_vyk1b"]
+[ext_resource type="PackedScene" uid="uid://d3g735kmawca2" path="res://scenes/game/characters/senpai.tscn" id="3_mx71x"]
+[ext_resource type="PackedScene" uid="uid://bv6yjr8gjtef4" path="res://scenes/game/characters/bf_pixel.tscn" id="4_upfp4"]
+[ext_resource type="PackedScene" uid="uid://c5y48burjtsqv" path="res://scenes/game/characters/gf_pixel.tscn" id="6_wi0x5"]
+[ext_resource type="PackedScene" uid="uid://c0ak0tfjl0r5y" path="res://scenes/game/stages/school.tscn" id="7_yr0ux"]
+
+[resource]
+script = ExtResource("1_poquf")
+player = ExtResource("4_upfp4")
+spectator = ExtResource("6_wi0x5")
+opponent = ExtResource("3_mx71x")
+stage = ExtResource("7_yr0ux")
+hud = ExtResource("1_mp6ec")
+hud_skin = ExtResource("2_vyk1b")
+metadata/_custom_type_script = "uid://dk2lxfhv5lvf4"

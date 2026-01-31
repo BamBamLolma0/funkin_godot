@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SongMetadata" format=3 uid="uid://c3onmoelrpbee"]
+
+[ext_resource type="Script" uid="uid://b7lu04jsahckp" path="res://scripts/resources/icon.gd" id="1_2g8qp"]
+[ext_resource type="Script" uid="uid://3bi6wwv6us1w" path="res://scripts/resources/song_metadata.gd" id="1_liel5"]
+[ext_resource type="Texture2D" uid="uid://cywl350ehs3oy" path="res://assets/game/characters/senpai/icon-senpai.png" id="2_rl6ui"]
+
+[sub_resource type="Resource" id="Resource_w5wa2"]
+script = ExtResource("1_2g8qp")
+texture = ExtResource("2_rl6ui")
+color = Color(1, 0.6666667, 0.43529412, 1)
+filter = 1
+internal_scale = Vector2(6, 6)
+metadata/_custom_type_script = "uid://b7lu04jsahckp"
+
+[resource]
+script = ExtResource("1_liel5")
+display_name = &"Senpai"
+icon = SubResource("Resource_w5wa2")
+metadata/_custom_type_script = "uid://3bi6wwv6us1w"

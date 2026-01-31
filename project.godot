@@ -27,7 +27,7 @@ config/macos_native_icon="res://assets/apple_icon.icns"
 
 [audio]
 
-buses/default_bus_layout="res://assets/resources/default_bus_layout.tres"
+buses/default_bus_layout="uid://dfk8owu2dipxx"
 general/ios/session_category=3
 general/ios/mix_with_others=true
 
